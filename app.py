@@ -7,9 +7,11 @@ def get_dosage_by_weight(weight, formulation):
 
     # Diphenhydramine formulations and dosages by weight
     if formulation == "Children's Diphenhydramine Liquid (12.5 mg / 5 mL)":
-        if weight < 11.00 or weight > 43.99:
+        if weight < 8.00 or weight > 43.99:
             warning = "Warning: Children's Diphenhydramine liquid is not typically used for this weight. Please verify your selection."
-        if 11.00 <= weight <= 15.99:
+        if 8.00 <= weight <= 10.99:
+            return "3.75 mL", "7.5 mg", warning
+        elif 11.00 <= weight <= 15.99:
             return "5 mL", "12.5 mg", warning
         elif 16.00 <= weight <= 21.99:
             return "7.5 mL", "18.75 mg", warning
@@ -23,9 +25,11 @@ def get_dosage_by_weight(weight, formulation):
             return "20 mL", "50 mg", warning
 
     elif formulation == "Children's Diphenhydramine Chewables (12.5 mg)":
-        if weight < 11.00 or weight > 43.99:
+        if weight < 8.00 or weight > 43.99:
             warning = "Warning: Children's Diphenhydramine chewables are not typically used for this weight. Please verify your selection."
-        if 11.00 <= weight <= 15.99:
+        if 8.00 <= weight <= 10.99:
+            return "0.5 tablet", "7.5 mg", warning
+        elif 11.00 <= weight <= 15.99:
             return "1 tablet", "12.5 mg", warning
         elif 16.00 <= weight <= 21.99:
             return "1.5 tablets", "18.75 mg", warning
