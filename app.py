@@ -7,51 +7,35 @@ def get_dosage_by_weight(weight, formulation):
 
     # Diphenhydramine formulations and dosages by weight
     if formulation == "Children's Diphenhydramine Liquid (12.5 mg / 5 mL)":
-        if weight < 8.00 or weight > 43.99:
+        if weight < 9.00 or weight > 45.99:
             warning = "Warning: Children's Diphenhydramine liquid is not typically used for this weight. Please verify your selection."
-        if 8.00 <= weight <= 10.99:
-            return "3.75 mL", "7.5 mg", warning
-        elif 11.00 <= weight <= 15.99:
+        if 9.00 <= weight <= 10.99:
+            return "4 mL", "10 mg", warning
+        elif 11.00 <= weight <= 16.99:
             return "5 mL", "12.5 mg", warning
-        elif 16.00 <= weight <= 21.99:
+        elif 17.00 <= weight <= 22.99:
             return "7.5 mL", "18.75 mg", warning
-        elif 22.00 <= weight <= 26.99:
+        elif 23.00 <= weight <= 45.99:
             return "10 mL", "25 mg", warning
-        elif 27.00 <= weight <= 32.99:
-            return "12.5 mL", "31.25 mg", warning
-        elif 33.00 <= weight <= 43.99:
-            return "15 mL", "37.5 mg", warning
-        elif weight >= 44.00:
-            return "20 mL", "50 mg", warning
 
     elif formulation == "Children's Diphenhydramine Chewables (12.5 mg)":
-        if weight < 8.00 or weight > 43.99:
+        if weight < 11.00:
             warning = "Warning: Children's Diphenhydramine chewables are not typically used for this weight. Please verify your selection."
-        if 8.00 <= weight <= 10.99:
-            return "0.5 tablet", "7.5 mg", warning
-        elif 11.00 <= weight <= 15.99:
+        if 11.00 <= weight <= 16.99:
             return "1 tablet", "12.5 mg", warning
-        elif 16.00 <= weight <= 21.99:
+        elif 17.00 <= weight <= 22.99:
             return "1.5 tablets", "18.75 mg", warning
-        elif 22.00 <= weight <= 26.99:
+        elif 23.00 <= weight <= 45.99:
             return "2 tablets", "25 mg", warning
-        elif 27.00 <= weight <= 32.99:
-            return "2.5 tablets", "31.25 mg", warning
-        elif 33.00 <= weight <= 43.99:
-            return "3 tablets", "37.5 mg", warning
-        elif weight >= 44.00:
+        elif weight >= 46.00:
             return "4 tablets", "50 mg", warning
 
     elif formulation == "Adult Diphenhydramine Tablets (25 mg)":
-        if weight < 22.00:
+        if weight < 23.00:
             warning = "Warning: Adult Diphenhydramine tablets are not typically used for this weight. Please verify your selection."
-        if 22.00 <= weight <= 26.99:
+        if 23.00 <= weight <= 45.99:
             return "1 tablet", "25 mg", warning
-        elif 27.00 <= weight <= 32.99:
-            return "1 tablet", "25 mg", warning
-        elif 33.00 <= weight <= 43.99:
-            return "1.5 tablets", "37.5 mg", warning
-        elif weight >= 44.00:
+        elif weight >= 46.00:
             return "2 tablets", "50 mg", warning
 
     return "Dose not available", "Please consult a healthcare provider.", warning
