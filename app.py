@@ -66,7 +66,9 @@ if st.button("Calculate Dosage"):
     if warning:
         st.warning(warning)
     st.write(f"Dosage: {dosage} ({dose})")
-    st.write("Give every 4 to 6 hours as needed for allergy symptoms. Do not exceed 6 doses in 24 hours.")
+    st.write("Give every 6 hours as needed. Do not exceed 4 doses in 24 hours.")
+    st.write("Do not give to childrens less than 2 years of age.")
+    st.write("Do not give to children 2 to 6 unless your doctor tells you to.")
     st.write("Do not use with any other diphenhydramine-containing products unless directed by a healthcare provider.")
 
 st.write("Note: Dosing information is sourced from [HealthyChildren.org](https://www.healthychildren.org/English/safety-prevention/at-home/medication-safety/Pages/Diphenhydramine.aspx).")
